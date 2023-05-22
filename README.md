@@ -1,0 +1,1 @@
+This is basic webpage for General Insurance Management System with Proposal Form and Login Page.

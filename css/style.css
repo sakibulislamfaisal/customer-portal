@@ -1,0 +1,250 @@
+.navbar .nav-item {
+  padding-left: 12px; }
+
+.navbar .nav-item {
+  text-transform: uppercase; }
+
+nav ul li a {
+   color: white;
+   text-decoration: none;
+}
+nav ul li a:hover{
+   color: #f4f4f4;
+}
+
+#header{
+   color: white;
+}
+.title{
+   font-weight: 700;
+   text-decoration: none;
+   text-transform: uppercase;
+}
+.header-text{
+  color: black;
+  font-size: small;
+}
+.navbar a {
+  font-size: 16px;
+  text-decoration: none;
+  text-decoration: none;
+ }
+
+.navbar #header {
+  font-size: 16px;
+  text-transform: uppercase; }
+
+.logo img{
+   width: 40px;
+   height: 40px;
+}
+.main-nav-header{
+   background-color:#504c89;
+   color: white;
+
+}
+#banner-header{
+  height: 620px;
+}
+.left-banner{
+margin-top: 130px !important;
+}
+.banner-img{
+  width: 600px;
+  height: 400px;
+}
+
+
+.proposal-button{
+  background-color: teal; 
+  border: none;
+  color: white;
+  padding: 10px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 18px;
+}
+.proposal-button:hover{
+   background-color:olivedrab;
+}
+.proposal-button a{
+   text-decoration: none;
+   color: white;
+   
+}
+.proposal-button-text{
+  margin-top: -10px;
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  line-height: 28px;
+  overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
+  color: #504c89;
+ 
+ }
+.index-body{
+  background: url(../img/banner-bg-7.jpg) no-repeat;
+  background-size: cover; 
+  background-position: center;
+}
+  select,
+  input,
+  textarea
+  {
+    
+    background-color: #ffffff;
+    border: 1px solid #2e51a2;
+    outline: none; }
+  
+  textarea {
+    height: 200px;
+    resize: none;
+    padding: 10px; }
+  
+  input,
+  button,
+  select {
+    height: 50px;
+    color: #3c31cf; }
+  
+  label,
+  button,
+  select {
+    cursor: pointer;
+   }
+  input,label{
+   margin: -1px;
+  }
+  .form-group{
+     margin-top: -10px;
+  }
+
+  /*proposal form style*/
+  .proposal-container {
+    max-width: 700px;
+    margin: 0 auto;
+    margin-top: 80px;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    height: 100%;
+    background-color: #fff;
+    color: black;
+    
+  }
+  .proposal-container h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .proposal-container .form-group {
+    margin-bottom: 20px;
+  }
+  .proposal-container .form-group .form-control {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    border: 1px solid #504c89;
+    border-radius: 5px;
+  }
+  .proposal-container input:focus
+   {
+    outline: none;
+    box-shadow: 0 0 5px #504c89;
+    border-color: #504c89;
+  }
+  .proposal-container button[type="submit"] {
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: green;
+    color: #fff;
+    cursor: pointer;
+    width: 140px;
+    text-align: center;
+
+  }
+.proposal-container button[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+.proposal-header{
+height: 500px;
+ }
+.proposal-header{
+  width: 100%;
+  height: 250vh;
+  display: flex;
+  flex-direction: column;
+  background: url(../img/login-bg.jpg) no-repeat;
+  background-size: cover;
+  color: white;
+}
+
+/*Login form style*/
+.login-container {
+  max-width: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+  height: 440px;
+  background-color: #fff;
+  color: black;
+  
+}
+.login-container h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.login-container .form-group {
+  margin-bottom: 20px;
+}
+.login-container input[type="text"],
+.login-container input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #504c89;
+  border-radius: 5px;
+}
+.login-container input[type="text"]:focus,
+.login-container input[type="password"]:focus {
+  outline: none;
+  box-shadow: 0 0 5px #504c89;
+  border-color: #504c89;
+}
+.login-container button[type="submit"] {
+  padding: 10px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: #fff;
+  cursor: pointer;
+
+}
+.login-container button[type="submit"]:hover {
+  background-color: #0056b3;
+}
+.login-header{
+     height: 520px;
+  }
+.login-body{
+width: 100%;
+height: 100vh;
+display: flex;
+flex-direction: column;
+/* justify-content: center; */
+background: url(../img/login-bg.jpg) no-repeat;
+background-size: cover;
+color: white;
+}
+ 

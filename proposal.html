@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proposal Form</title>
+    <link rel="stylesheet" href="css/uikit.min.css" class="css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="img/logo.png" class="favicon">
+</head>
+
+<body class="proposal-body">
+     <!--navigation header start-->
+    <nav class="navbar navbar-expand-md main-nav-header p-2" uk-sticky="top: 200; animation: uk-animation-slide-top; bottom: #sticky-on-scroll-up">
+      <div class="container">
+          <div class="logo">
+              <a>
+                  <img src="img/logo.png" alt="logo">
+              </a>
+              </div>
+        <a href="index.html" class="navbar-brand ml-1 " id="header">General Insurance Management System</a>
+        <button class="navbar-toggler navbar-toggler-right " data-toggle="collapse" data-target="#navigation-bar">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navigation-bar">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html" >Login</a> 
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+ 
+    <section class="proposal-header">
+      <div class="container">
+        <div class="proposal-container">
+          <h6 class="proposal text-center mb-4"> <strong>Proposal For Standard Fire Policy</strong></h2>
+          <form>
+            <div class="form-group">
+              <label for="username"><span style="color: red;">*</span>Insured Name:</label>
+              <input type="text" required class="form-control" id="insuredName" placeholder="Enter your FullName">
+            </div>
+            <div class="form-group">
+                <label for="address"><span style="color: red;">*</span>Address:</label>
+                <textarea placeholder="Enter your Address" class="form-control" id="address" rows="2" required></textarea>
+              </div>
+              <div class="form-group">
+                <label for="gender"><span style="color: red;">*</span>Gender:</label>
+                <select class="form-control" id="gender" required>
+                  <option value="">Select Gender</option>
+                  <option value="male">Male</option>
+                  <option value="female">Female</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="dob"><span style="color: red;">*</span>Date of Birth:</label>
+                <input type="date" class="form-control" id="dob" required>
+              </div>
+              <div class="form-group">
+                <label for="identification-no">Identification No:</label>
+                <input placeholder="Enter Your NID Number" type="text" class="form-control" id="identification-no" required>
+              </div>
+              <div class="form-group">
+                <label for="country"><span style="color: red;">*</span>Country:</label>
+                <select class="form-control" id="country" required>
+                  <option value="">Select Country</option>
+                  <option value="male">Bangladesh</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="division"><span style="color: red;">*</span>Division:</label>
+                <select class="form-control" id="country" required>
+                  <option value="">Select Division</option>
+                  <option value="male">Dhaka</option>
+                  <option value="female">Barisal</option>
+                  <option value="female">Rangpur</option>
+                  <option value="female">Commila</option>
+                  <option value="female">Mymensingh</option>
+                  <option value="female">Khulna</option>
+                  <option value="other">Chittagong</option>
+                  <option value="other">Sylhet</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="district"><span style="color: red;">*</span>District:</label>
+                <select class="form-control" id="district" required>
+                  <option value="">Select District</option>
+                  <option value="">Select District</option>
+                    <option value="Bagerhat">Bagerhat</option>
+                    <option value="Bandarban">Bandarban</option>
+                    <option value="Barguna">Barguna</option>
+                    <option value="Barisal">Barisal</option>
+                    <option value="Bhola">Bhola</option>
+                    <option value="Bogra">Bogra</option>
+                    <option value="Brahmanbaria">Brahmanbaria</option>
+                    <option value="Chandpur">Chandpur</option>
+                    <option value="Chapai Nawabganj">Chapai Nawabganj</option>
+                    <option value="Chittagong">Chittagong</option>
+                    <option value="Chuadanga">Chuadanga</option>
+                    <option value="Comilla">Comilla</option>
+                    <option value="Cox's Bazar">Cox's Bazar</option>
+                    <option value="Dhaka">Dhaka</option>
+                    <option value="Dinajpur">Dinajpur</option>
+                    <option value="Faridpur">Faridpur</option>
+                    <option value="Feni">Feni</option>
+                    <option value="Gaibandha">Gaibandha</option>
+                    <option value="Gazipur">Gazipur</option>
+                    <option value="Gopalganj">Gopalganj</option>
+                    <option value="Habiganj">Habiganj</option>
+                    <option value="Jamalpur">Jamalpur</option>
+                    <option value="Jessore">Jessore</option>
+                    <option value="Jhalokati">Jhalokati</option>
+                    <option value="Jhenaidah">Jhenaidah</option>
+                    <option value="Joypurhat">Joypurhat</option>
+                    <option value="Khagrachhari">Khagrachhari</option>
+                    <option value="Khulna">Khulna</option>
+                    <option value="Kishoreganj">Kishoreganj</option>
+                    <option value="Kurigram">Kurigram</option>
+                    <option value="Kushtia">Kushtia</option>
+                    <option value="Lakshmipur">Lakshmipur</option>
+                    <option value="Lalmonirhat">Lalmonirhat</option>
+                    <option value="Madaripur">Madaripur</option>
+                    <option value="Magura">Magura</option>
+                    <option value="Manikganj">Manikganj</option>
+                    <option value="Meherpur">Meherpur</option>
+                    <option value="Moulvibazar">Moulvibazar</option>
+                    <option value="Munshiganj">Munshiganj</option>
+                    <option value="Mymensingh">Mymensingh</option>
+                    <option value="Naogaon">Naogaon</option>
+                    <option value="Narail">Narail</option>
+                    <option value="Narayanganj">Narayanganj</option>
+                    <option value="Narsingdi">Narsingdi</option>
+                    <option value="Natore">Natore</option>
+                    <option value="Nawabganj">Nawabganj</option>
+                    <option value="Netrokona">Netrokona</option>
+                    <option value="Nilphamari">Nilphamari</option>
+                    <option value="Noakhali">Noakhali</option>
+                    <option value="Pabna">Pabna</option>
+                    <option value="Panchagarh">Panchagarh</option>
+                    <option value="Patuakhali">Patuakhali</option>
+                    <option value="Pirojpur">Pirojpur</option>
+                    <option value="Rajbari">Rajbari</option>
+                    <option value="Rajshahi">Rajshahi</option>
+                    <option value="Rangamati">Rangamati</option>
+                    <option value="Rangpur">Rangpur</option>
+                    <option value="Satkhira">Satkhira</option>
+                    <option value="Shariatpur">Shariatpur</option>
+                    <option value="Sherpur">Sherpur</option>
+                    <option value="Sirajganj">Sirajganj</option>
+                    <option value="Sunamganj">Sunamganj</option>
+                    <option value="Sylhet">Sylhet</option>
+                    <option value="Tangail">Tangail</option>
+                    <option value="Thakurgaon">Thakurgaon</option>
+        </select>
+         </div>
+              <div class="form-group">
+                <label for="mobile-phone"><span style="color: red;">*</span>Mobile Phone:</label>
+                <input type="tel" class="form-control" id="mobile-phone" required>
+              </div>
+              <div class="form-group">
+                <label for="property-type"><span style="color: red;">*</span>Type of Property:</label>
+                <select class="form-control" id="property-type" required>
+                  <option value="">Select Property Type</option>
+                  <option value="house">House</option>
+                  <option value="apartment">Apartment</option>
+                  <option value="office">Office</option>
+                  <option value="commercial">Commercial</option>
+                  <option value="industrial">Industrial</option>
+                  <option value="machinery">Machinery</option>
+                  <option value="hotel">Hotel</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="construction-type"><span style="color: red;">*</span>Construction Type:</label>
+                <select class="form-control" id="construction-type" required>
+                  <option value="">Select Construction Type</option>
+                  <option value="class I">Class I</option>
+                  <option value="class II">Class II</option>
+                  <option value="class III">Class III</option>
+                  <option value="class IV">Class IV</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="cover-period"><span style="color: red;">*</span>Cover Period for quick entry:</label>
+                <select class="form-control" id="cover-period" required>
+                    <option value="">Select Period</option>
+                    <option value="1-month">1 Month</option>
+                    <option value="2-month">2 Month</option>
+                    <option value="3-month">3 Month</option>
+                    <option value="4-month">4 Month</option>
+                    <option value="5-month">5 Month</option>
+                    <option value="6-month">6 Month</option>
+                    <option value="7-month">7 Month</option>
+                    <option value="8-month">8 Month</option>
+                    <option value="9-month">9 Month</option>
+                    <option value="10-month">10 Month</option>
+                    <option value="11-month">11 Month</option>
+                    <option value="12-month">12 Month</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label for="commencement-date"><span style="color: red;">*</span>Commencement Date:</label>
+                <input type="date" class="form-control" id="commencement-date" required>
+              </div>
+              <div class="form-group">
+                <label for="expiry-date"><span style="color: red;">*</span>Expiry Date:</label>
+                <input type="date" class="form-control" id="expiry-date" required>
+              </div>
+              <div class="form-group">
+                <label for="sum-insured"><span style="color: red;">*</span>Sum Insured:</label>
+                <input type="text" class="form-control" id="sum-insured" placeholder="Enter Sum Insured Amount(Approximate..)" required>
+              </div>
+              <div class="form-group">
+                <label for="location"><span style="color: red;">*</span>Situation/Location:</label>
+                <textarea placeholder="Write details about bulding/factory name and address" class="form-control" id="location" rows="3" required></textarea>
+              </div>
+              <div class="d-flex justify-content-center">
+                <button class="btn btn-primary btn-lg">Submit</button>
+              </div>
+          </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/uikit.min.js"></script>
+    <script src="js/uikit-icons.min.js"></script>
+
+</body>
+
+</html>
+
+
+</html>
