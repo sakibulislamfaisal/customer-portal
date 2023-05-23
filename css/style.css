@@ -1,12 +1,28 @@
+.navbar-toggler-icon {
+  background-image: none;
+  margin-top: 7px;
+}
+.navbar-toggler-icon::before {
+  font-family: FontAwesome;
+  content: "\f0c9"; /* fa-bars, fa-navicon */
+  color: white;
+
+}
 .navbar .nav-item {
-  padding-left: 12px; }
+  padding-left: 1px !important;
+  margin: 0;
+ }
 
 .navbar .nav-item {
   text-transform: uppercase; }
 
+  
+
 nav ul li a {
    color: white;
    text-decoration: none;
+  
+  
 }
 nav ul li a:hover{
    color: #f4f4f4;
@@ -14,6 +30,7 @@ nav ul li a:hover{
 
 #header{
    color: white;
+
 }
 .title{
    font-weight: 700;
@@ -37,10 +54,13 @@ nav ul li a:hover{
 .logo img{
    width: 40px;
    height: 40px;
+   padding: 2px;
 }
 .main-nav-header{
    background-color:#504c89;
    color: white;
+   margin-left: -60px;
+  
 
 }
 #banner-header{
