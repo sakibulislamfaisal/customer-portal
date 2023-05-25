@@ -113,31 +113,20 @@
                   <option value="class IV">Class IV</option>
                 </select>
               </div>
-              <div class="form-group">
-                <label for="cover-period"><span style="color: red;">*</span>Cover Period for quick entry:</label>
-                <select class="form-control" id="cover-period" required>
-                    <option value="">Select Period</option>
-                    <option value="1-month">1 Month</option>
-                    <option value="2-month">2 Month</option>
-                    <option value="3-month">3 Month</option>
-                    <option value="4-month">4 Month</option>
-                    <option value="5-month">5 Month</option>
-                    <option value="6-month">6 Month</option>
-                    <option value="7-month">7 Month</option>
-                    <option value="8-month">8 Month</option>
-                    <option value="9-month">9 Month</option>
-                    <option value="10-month">10 Month</option>
-                    <option value="11-month">11 Month</option>
-                    <option value="12-month">12 Month</option>
-                  </select>
-              </div>
+            
               <div class="form-group">
                 <label for="commencement-date"><span style="color: red;">*</span>Commencement Date:</label>
-                <input type="date" class="form-control" id="commencement-date" required>
+                <input type="date" class="form-control" id="commencement-date" onchange="updateExpiryDate()" required>
               </div>
-              <div class="form-group">
+              <div class="form-group"> 
                 <label for="expiry-date"><span style="color: red;">*</span>Expiry Date:</label>
                 <input type="date" class="form-control" id="expiry-date" required>
+              </div>
+              <div class="form-group">
+                <label for="cover-period"><span style="color: red;">*</span>Cover Period :</label>
+                <select class="form-control" id="cover-period" onchange="updateExpiryDate()"  required>
+                  <option value="1">1 Year</option>
+                  </select>
               </div>
               <div class="form-group">
                 <label for="sum-insured"><span style="color: red;">*</span>Sum Insured:</label>

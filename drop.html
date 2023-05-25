@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Policy Dates</title>
+</head>
+<body>
+  <h1>Policy Dates</h1>
+
+  <label for="start-date">Start Date:</label>
+  <input type="date" id="start-date" onchange="updateExpiryDate()">
+
+  <label for="expiry-date">Expiry Date:</label>
+  <input type="date" id="expiry-date">
+
+  <label for="policy-duration">Policy Duration:</label>
+  <select id="policy-duration" onchange="updateExpiryDate()">
+    <option value="1">1 Year</option>
+    <option value="2">2 Years</option>
+    <option value="3">3 Years</option>
+    <!-- Add more options as needed -->
+  </select>
+
+  <script>
+    function updateExpiryDate() {
+      var startDate = document.getElementById('start-date').value;
+      var policyDuration = document.getElementById('policy-duration').value;
+
+      var start = new Date(startDate);
+      var expiry = new Date(start.getTime());
+
+      expiry.setFullYear(expiry.getFullYear() + parseInt(policyDuration));
+
+      var expiryYear = expiry.getFullYear();
+      var expiryMonth = (expiry.getMonth() + 1).toString().padStart(2, '0');
+      var expiryDay = expiry.getDate().toString().padStart(2, '0');
+      var expiryFormatted = expiryYear + '-' + expiryMonth + '-' + expiryDay;
+
+      document.getElementById('expiry-date').value = expiryFormatted;
+    }
+
+    // Set default start date to today
+    var today = new Date();
+    var todayFormatted = today.toISOString().split('T')[0];
+    document.getElementById('start-date').value = todayFormatted;
+
+    // Initialize expiry date based on default start date and duration
+    updateExpiryDate();
+  </script>
+</body>
+</html>

@@ -592,3 +592,30 @@ $(document).ready(function() {
         sessionStorage.setItem('selectedDistrict', selectedDistrict);
     });
 });
+
+
+//update expiry date
+function updateExpiryDate() {
+    var startDate = document.getElementById('commencement-date').value;
+    var policyDuration = document.getElementById('cover-period').value;
+
+    var start = new Date(startDate);
+    var expiry = new Date(start.getTime());
+
+    expiry.setFullYear(expiry.getFullYear() + parseInt(policyDuration));
+
+    var expiryYear = expiry.getFullYear();
+    var expiryMonth = (expiry.getMonth() + 1).toString().padStart(2, '0');
+    var expiryDay = expiry.getDate().toString().padStart(2, '0');
+    var expiryFormatted = expiryYear + '-' + expiryMonth + '-' + expiryDay;
+
+    document.getElementById('expiry-date').value = expiryFormatted;
+  }
+
+  // Set default start date to today
+  var today = new Date();
+  var todayFormatted = today.toISOString().split('T')[0];
+  document.getElementById('commencement-date').value = todayFormatted;
+
+  // Initialize expiry date based on default start date and duration
+  updateExpiryDate();
