@@ -517,15 +517,15 @@ var postalCodeData = {
 };
 
 $(document).ready(function() {
-    var countrySelect = $('#country');
+  //  var countrySelect = $('#country');
     var divisionSelect = $('#division');
     var districtSelect = $('#district');
     var postalCodeInput = $('#postal-code');
 
     // Populate country dropdown
-    $.each(countryData, function(index, country) {
-        countrySelect.append($('<option></option>').text(country));
-    });
+    // $.each(countryData, function(index, country) {
+    //     countrySelect.append($('<option></option>').text(country));
+    // });
 
     // Populate division dropdown
     $.each(divisionData, function(index, division) {
@@ -553,12 +553,12 @@ $(document).ready(function() {
     });
 
     // Set selected values when page is reloaded
-    var selectedCountry = sessionStorage.getItem('selectedCountry');
+   // var selectedCountry = sessionStorage.getItem('selectedCountry');
     var selectedDivision = sessionStorage.getItem('selectedDivision');
     var selectedDistrict = sessionStorage.getItem('selectedDistrict');
 
     if (selectedCountry) {
-        countrySelect.val(selectedCountry);
+       // countrySelect.val(selectedCountry);
         divisionSelect.empty();
         divisionSelect.append($('<option></option>').text('Select Division'));
         districtSelect.empty();
@@ -569,7 +569,7 @@ $(document).ready(function() {
             $.each(divisions, function(index, division) {
                 divisionSelect.append($('<option></option>').text(division));
             });
-            divisionSelect.val(selectedDivision);
+            divisionSelect.val(selectedDivision);   
             if (selectedDistrict) {
                 var districts = postalCodeData[selectedCountry][selectedDivision];
                 $.each(districts, function(index, district) {
@@ -584,10 +584,10 @@ $(document).ready(function() {
 
     // Save selected values to session storage
     countrySelect.on('change', function() {
-        var selectedCountry = $(this).val();
+      //  var selectedCountry = $(this).val();
         var selectedDivision = divisionSelect.val();
         var selectedDistrict = districtSelect.val();
-        sessionStorage.setItem('selectedCountry', selectedCountry);
+      //  sessionStorage.setItem('selectedCountry', selectedCountry);
         sessionStorage.setItem('selectedDivision', selectedDivision);
         sessionStorage.setItem('selectedDistrict', selectedDistrict);
     });
