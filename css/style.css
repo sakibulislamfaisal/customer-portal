@@ -64,14 +64,15 @@ nav ul li a:hover{
 
 }
 #banner-header{
-  height: 620px;
+  height: 700px;
 }
 .left-banner{
-margin-top: 130px !important;
+margin-top: 180px !important;
 }
 .banner-img{
   width: 600px;
   height: 400px;
+  margin-top: 70px;
 }
 
 
