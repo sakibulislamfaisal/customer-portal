@@ -1,3 +1,62 @@
+
+@media (max-width: 575px) {
+ 
+ .logo{
+   margin-left:50px;
+ }
+ .navbar #header{
+  font-size: 10px !important;
+  margin-left: 20px !important;
+ } 
+ .navbar #navigation-bar{
+   margin-left: 60px;
+   font-size: 16px;
+ }
+}
+@media(max-width:576px){
+  .logo{
+    margin-left:60px;
+  }
+  .navbar #header{
+   font-size: 10px !important;
+   margin-left: -160px;
+  } 
+  .navbar #navigation-bar{
+    margin-left: 110px;
+    font-size: 8px;
+  }
+}
+
+@media (min-width: 576px) and (max-width: 767px) {
+  .logo{
+    margin-left:20px;
+  }
+  .navbar #header{
+   font-size: 10px !important;
+   margin-left: -160px;
+  } 
+  .navbar #navigation-bar{
+    margin-left: 70px;
+    font-size: 12px;
+  }
+}
+@media (min-width: 768px) and (max-width: 991px) {
+}
+@media (max-width: 767px) {
+ 
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .container .logo{
+    margin-left:-60px ;
+  }
+  .navbar #header{
+   font-size: 16px !important;
+   margin-left: 10px;
+   
+  } 
+  
+ 
+}
 .navbar-toggler-icon {
   background-image: none;
   margin-top: 7px;
@@ -269,3 +328,4 @@ background-size: cover;
 color: white;
 }
  
+
