@@ -20,7 +20,7 @@
 
 </head>
 
-<body class="login-body">
+<body class="Signup-body">
      <!--navigation header start-->
      <nav class="navbar  main-nav-header navbar-expand-md  text-light fixed-top" >
       <div class="container">
@@ -46,26 +46,29 @@
       </div>
     </nav>
 
-    <section class="login-header">
+    <section class="Signup-header">
       <div class="container">
-        <div class="login-container">
-          <h5 class="login text-center mb-4"> <strong>General Insurance Management System</strong></h2>
+        <div class="Signup-container">
+          <h5 class="Signup text-center mb-4"> <strong>General Insurance Management System</strong></h2>
           <form>
             <div class="form-group">
               <label for="username"><span style="color: red;">*</span>Username:</label>
               <input type="text" required class="form-control" id="username" placeholder="Enter your username">
             </div>
             <div class="form-group">
+                <label for="email"><span style="color: red;">*</span>Email:</label>
+                <input type="text" required class="form-control" id="email" placeholder="Enter your email">
+              </div>
+            <div class="form-group">
               <label for="password"><span style="color: red;">*</span>Password:</label>
               <input type="password"  required class="form-control" id="password" placeholder="Enter your password">
             </div>
-            <span class="sign-in-recovery">Forgot your password? <a href="#">Recover password</a></span>
-
-            <button type="submit" class="btn btn-primary btn-block mt-3">Login</button>
-            <div class="or text-center mt-1">
-              <span>OR<br></span>
-              <span class="sign-in-recovery">Don't have an account? <a style="color: blue;" href="Signup.html">Sign Up Here</a></span>
-          </div>
+            <div class="form-group">
+                <label for="confirm-password"><span style="color: red;">*</span>Confirm Password:</label>
+                <input type="password"  required class="form-control" id="confirm-password" placeholder="Enter your confirm password">
+              </div>
+            <button type="submit" class="btn btn-primary btn-block mt-3">Sign Up</button>
+            
           </form>
         </div>
       </div>
