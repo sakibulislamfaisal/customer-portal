@@ -1,10 +1,12 @@
 var divisionData = {
     "Barisal": [
-      { district: "Barguna", postalCode: "8200" },
+        
+      { district: "Barguna", postalCode: "8700" },
       { district: "Bhola", postalCode: "8300" },
       { district: "Jhalokati", postalCode: "8400" },
       { district: "Patuakhali", postalCode: "8600" },
       { district: "Pirojpur", postalCode: "8500" },
+      { district: "Barishal", postalCode: "8200" },
       // Add more districts and postal codes for Barisal division
     ],
     "Chittagong": [
@@ -18,6 +20,8 @@ var divisionData = {
       { district: "Lakshmipur", postalCode: "3700" },
       { district: "Noakhali", postalCode: "3800" },
       { district: "Rangamati", postalCode: "4500" },
+      { district: "Chattogram", postalCode: "4000" },
+      
       // Add more districts and postal codes for Chittagong division
     ],
     "Dhaka": [
@@ -34,6 +38,7 @@ var divisionData = {
       { district: "Rajbari", postalCode: "7700" },
       { district: "Shariatpur", postalCode: "8000" },
       { district: "Tangail", postalCode: "1900" },
+      { district: "Dhaka", postalCode: "1000" },
       // Add more districts and postal codes for Dhaka division
     ],
     "Khulna": [
@@ -41,7 +46,7 @@ var divisionData = {
       { district: "Chuadanga", postalCode: "7200" },
       { district: "Jessore", postalCode: "7400" },
       { district: "Jhenaidah", postalCode: "7300" },
-     
+      { district: "Khulna", postalCode: "9000" },
       { district: "Kushtia", postalCode: "7000" },
       { district: "Magura", postalCode: "7600" },
       { district: "Meherpur", postalCode: "7100" },
@@ -51,7 +56,7 @@ var divisionData = {
     ],
     "Mymensingh": [
       { district: "Jamalpur", postalCode: "2000" },
-   
+      { district: "Mymensingh", postalCode: "2200" },
       { district: "Netrokona", postalCode: "2400" },
       { district: "Sherpur", postalCode: "2100" },
       // Add more districts and postal codes for Mymensingh division
@@ -63,8 +68,8 @@ var divisionData = {
       { district: "Naogaon", postalCode: "6500" },
       { district: "Natore", postalCode: "6400" },
       { district: "Pabna", postalCode: "6600" },
-     
       { district: "Sirajganj", postalCode: "6700" },
+      { district: "Rajshahi", postalCode: "6000" },
       // Add more districts and postal codes for Rajshahi division
     ],
     "Rangpur": [
@@ -74,14 +79,15 @@ var divisionData = {
       { district: "Lalmonirhat", postalCode: "5500" },
       { district: "Nilphamari", postalCode: "5300" },
       { district: "Panchagarh", postalCode: "5000" },
-     
       { district: "Thakurgaon", postalCode: "5100" },
+      { district: "Rangpur", postalCode: "5400" },
       // Add more districts and postal codes for Rangpur division
     ],
     "Sylhet": [
       { district: "Habiganj", postalCode: "3300" },
       { district: "Moulvibazar", postalCode: "3200" },
       { district: "Sunamganj", postalCode: "3000" },
+      { district: "Sylhet", postalCode: "3100" },
      
       // Add more districts and postal codes for Sylhet division
     ]
@@ -140,7 +146,7 @@ var divisionData = {
     }
   }
 
-
+//calculate expiry date
   function calculateExpiryDate() {
     var commencementDateInput = document.getElementById("commDate");
     var expiryDateInput = document.getElementById("expiryDate");
@@ -148,21 +154,21 @@ var divisionData = {
     var commencementDate = new Date(commencementDateInput.value);
     var expiryDate = new Date(commencementDate);
 
-    expiryDate.setFullYear(expiryDate.getFullYear() +1);
+    expiryDate.setFullYear(expiryDate.getFullYear() + 1);
 
     expiryDateInput.value = formatDate(expiryDate);
   }
 
   function formatDate(date) {
     var year = date.getFullYear();
-    var month = ("0" + (date.getMonth() + 1)).slice(-2);
+    var month = ("0" + (date.getMonth()+1 )).slice(-2);
     var day = ("0" + date.getDate()).slice(-2);
 
-    return year + "-" + month + "-" + day;
+    return year + "-" + month + "-" + (day-1);
   }
 
 
-
+//post api call
     const form = document.getElementById('myForm');
     form.addEventListener('submit', handleSubmit);
 
@@ -180,7 +186,7 @@ var divisionData = {
          var postalCode = document.getElementById("postalCode").value;
          var mobilePhoneNo = document.getElementById("mobilePhoneNo").value;
          var typeProperty = document.getElementById("typeProperty").value;
-         var constructionName = document.getElementById("constructionName").value;
+       //  var constructionName = document.getElementById("constructionName").value;
          var commDate = document.getElementById("commDate").value;
          var expiryDate = document.getElementById("expiryDate").value;
          var coverPeriod = document.getElementById("coverPeriod").value;
@@ -199,36 +205,101 @@ var divisionData = {
                     postalCode:postalCode ,
                     mobilePhoneNo:mobilePhoneNo ,
                     typeProperty:typeProperty ,
-                    constructionName:constructionName ,
+                    //constructionName:constructionName ,
                     commDate:commDate,
                     expiryDate:expiryDate ,
                     coverPeriod:coverPeriod ,
                     sumInsured:sumInsured ,
                     location:location ,
+                   
          }
 
-       console.log(data)
-
-      const requestOptions = {
+         var data1 ={
+            requestTime: "2023-05-28 14:30:30",
+            data: {
+             "innerProductCode": "FIR",
+             "productCode": "FIR",
+             "planCode": "D",
+             "planRadio": "C",
+             "accountNo": "H000120C",
+             commDate:commDate,
+             expiryDate:expiryDate ,
+             sumInsured:sumInsured ,
+             coverPeriod:coverPeriod ,
+             "coverPeriodFlag": "Y",
+             "coinsType": "0",
+             "reinsInwardInd": false,
+             "renewalInd": "0",
+             "previousPolicyNo": "",
+             "guInsuredVo": {
+              "insuredType": "I",
+              insuredName: insuredName,
+              "identifyType": "",
+              identifyNo:identifyNo ,
+              mobilePhoneNo:mobilePhoneNo ,
+              "email": "",
+              gender:gender ,
+              birth:birth ,
+              country:country,
+              "countryName": "",
+              postalCode:postalCode ,
+              province:province,
+              "provinceName": "",
+              dist:dist ,
+              "distName": "",
+              address:address,
+              "isStrategicClient": false
+             },
+             "guSubjectVoList": [
+              {
+               "guSubjectFireVo": {
+                typeProperty:typeProperty ,
+                location:location ,
+                "constructionCode": "",
+                "constructionName": ""
+               }
+              }
+             ],
+             "fileList": [
+                {
+                    "fileName": "",
+                    "filePath": ""
+                }
+            ]
     
+            }
+           }
+
+       console.log("field data",data1)
+      const requestOptions = {
         method: 'POST',
-        mode: 'no-cors', 
         headers: {
           "Content-Type": "application/json",
           'Access-Control-Allow-Origin': '*',
           'Access-Control-Allow-Methods': 'POST',
-       
         },
-        body: JSON.stringify(data)
+        body: JSON.stringify(data1)
     }
+   //console.log(requestOptions);
+
+   
+
     fetch('http://124.71.70.238:8805/underwriting/open/quotation/saveH5?userCode=admin',requestOptions)
         .then(response => response.json())
         .then(data => {
-          // Handle the response data
+            Swal.fire({
+                icon: 'success',
+                title: 'Success',
+                text: `Submit Successfully! Quotation No: ${data.data.quotationNo}`,
+                timer: 5000,
+                showConfirmButton: false
+              });
+        //   alert("submit successfully, your quotation number is "+data.data.quotationNo);
           console.log(data);
         })
         .catch(error => {
           // Handle any errors that occurred during the request
           console.error('Error:', error);
         });
+        
 }
