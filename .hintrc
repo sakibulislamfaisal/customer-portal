@@ -39,6 +39,12 @@
     ],
     "button-type": "off",
     "meta-viewport": "off",
-    "axe/language": "off"
+    "axe/language": "off",
+    "axe/forms": [
+      "default",
+      {
+        "select-name": "off"
+      }
+    ]
   }
 }

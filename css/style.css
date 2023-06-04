@@ -1,4 +1,15 @@
 
+.success-text {
+  color: green;
+  font-weight: bold;
+}
+.custom-confirm-button-class {
+  background-color: green;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 16px;
+}
+
 @media (max-width: 575px) {
  
  .logo{
@@ -209,14 +220,14 @@ body {
 
   /*proposal form style*/
   .proposal-container {
-    max-width: 700px;
+    max-width: 900px;
     margin: 0 auto;
     margin-top: 80px;
     padding: 20px;
     border: 1px solid black;
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    height: 1500px;
+    height: 1040px;
     background-color: #fff;
     color: black;
     
@@ -261,7 +272,7 @@ height: 500px;
  }
 .proposal-header{
   width: 100%;
-  height: 250vh;
+  height: 200vh;
   display: flex;
   flex-direction: column;
   background: url(../img/login-bg.jpg) no-repeat;

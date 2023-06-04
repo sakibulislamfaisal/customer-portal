@@ -1,0 +1,44 @@
+<!-- HTML code -->
+<label for="type">Select Type:</label>
+<select id="type" onchange="showOptions()">
+  <option value="Individual" selected>Individual</option>
+  <option value="Corporate">Corporate</option>
+</select>
+
+<div id="individualOptions">
+  <label for="individualSelection">Individual Selection:</label>
+  <select id="individualSelection">
+    <option value="Option 1">Option 1</option>
+    <option value="Option 2">Option 2</option>
+    <option value="Option 3">Option 3</option>
+  </select>
+</div>
+
+<div id="corporateOptions" style="display: none;">
+  <label for="corporateSelection">Corporate Selection:</label>
+  <select id="corporateSelection">
+    <option value="Option A">Option A</option>
+    <option value="Option B">Option B</option>
+    <option value="Option C">Option C</option>
+  </select>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function() {
+    showOptions();
+  });
+
+  function showOptions() {
+    var typeDropdown = document.getElementById("type");
+    var individualOptions = document.getElementById("individualOptions");
+    var corporateOptions = document.getElementById("corporateOptions");
+
+    if (typeDropdown.value === "Individual") {
+      individualOptions.style.display = "block";
+      corporateOptions.style.display = "none";
+    } else if (typeDropdown.value === "Corporate") {
+      individualOptions.style.display = "none";
+      corporateOptions.style.display = "block";
+    }
+  }
+</script>
