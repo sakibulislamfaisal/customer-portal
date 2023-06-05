@@ -1,6 +1,5 @@
 var divisionData = {
-  "Barisal": [
-      
+  "Barisal": [  
     { district: "Barguna", postalCode: "8700" },
     { district: "Bhola", postalCode: "8300" },
     { district: "Jhalokati", postalCode: "8400" },
@@ -160,7 +159,7 @@ function populatePostalCode() {
 //Call Proposal Form API
       document.getElementById('myForm').addEventListener('submit', function(event) {
         event.preventDefault(); // Prevent the form from submitting normally
-  
+
         var insuredName = document.getElementById("insuredName").value;
         var address = document.getElementById("address").value
         var gender = document.getElementById("gender").value;
@@ -183,15 +182,16 @@ function populatePostalCode() {
         const file = fileInput.files[0];
         const currentDate = new Date();
 
+
+//Time and date count 
         const year = currentDate.getFullYear();
         const month = String(currentDate.getMonth() + 1).padStart(2, '0');
         const date = String(currentDate.getDate()).padStart(2, '0');
         const hour = String(currentDate.getHours()).padStart(2, '0');
         const minute = String(currentDate.getMinutes()).padStart(2, '0');
         const second = String(currentDate.getSeconds()).padStart(2, '0');
-
         const formattedDate = `${year}-${month}-${date} ${hour}:${minute}:${second}`;
-        console.log(formattedDate);
+        //console.log(formattedDate);
 
   
         const reader = new FileReader();
@@ -199,7 +199,6 @@ function populatePostalCode() {
           const base64Data = reader.result.split(',')[1]; // Get the base64 data (remove the prefix)
   
           var data ={
-          
             requestTime: formattedDate,
             data: {
              "innerProductCode": "FIR",
@@ -272,7 +271,6 @@ Swal.fire({
     Swal.showLoading();
   }
 });
-
 
 
           fetch('http://124.71.70.238:8805/underwriting/open/quotation/saveH5?userCode=admin', {
